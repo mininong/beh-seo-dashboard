@@ -3,151 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0d4f7f">
-<title>Bangkok Eye Hospital — SEO Executive Dashboard</title>
+<meta name="theme-color" content="#eaf7ff">
+<title>BEH SEO Executive Dashboard — August 2026</title>
 <style>
 :root{
-  --ink:#16344a;--muted:#6f8494;--blue:#0f5f96;--blue-2:#2b84bd;--navy:#103f67;
-  --sky:#eaf6fc;--sky-2:#f5fbfe;--line:#dce9f1;--green:#19815d;--green-bg:#ecf7f1;
-  --red:#c34f58;--red-bg:#fff0f1;--amber:#9a6a10;--amber-bg:#fff7e6;--shadow:0 16px 40px rgba(23,64,91,.08)
+  --blue:#0c4f91;--blue2:#1977ba;--cyan:#13b3dd;--ink:#13395e;--muted:#627d98;
+  --line:#d7eaf6;--bg:#eff9ff;--card:#ffffff;--green:#18a56a;--red:#ef5b68;--pink:#ffecee;
+  --greenbg:#e7f8f0;--yellow:#f6b832;--yellowbg:#fff7dc;--shadow:0 8px 24px rgba(26,91,136,.08)
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:linear-gradient(180deg,#f8fbfd 0,#f3f7fa 100%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink)}
-a{color:inherit}
-.shell{max-width:1240px;margin:auto;padding:28px 22px 48px}
-.header{display:flex;justify-content:space-between;align-items:center;gap:22px;margin-bottom:20px}
-.brand{display:flex;align-items:center;gap:18px;min-width:0}
-.logo-wrap{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 14px;box-shadow:0 8px 24px rgba(23,64,91,.05)}
-.logo{display:block;width:210px;max-width:42vw;height:auto}
-.kicker{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--blue);text-transform:uppercase}
-.header h1{font-size:clamp(26px,4vw,40px);line-height:1.08;margin:5px 0 2px;color:#113f64}
-.period{font-size:14px;color:var(--muted)}
-.badge{font-size:12px;font-weight:800;color:var(--blue);background:#edf7fc;padding:8px 12px;border-radius:999px;white-space:nowrap}
-.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:18px;margin-bottom:18px}
-.hero-main{background:linear-gradient(135deg,#0d4774 0%,#0f6b9e 68%,#1b86b5 100%);color:#fff;border-radius:26px;padding:30px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
-.hero-main:after{content:"";position:absolute;width:320px;height:320px;border:1px solid rgba(255,255,255,.14);border-radius:50%;right:-110px;top:-110px}
-.hero-main:before{content:"";position:absolute;width:210px;height:210px;border:1px solid rgba(255,255,255,.10);border-radius:50%;right:-45px;top:-55px}
-.hero-label{font-size:12px;letter-spacing:.15em;font-weight:800;opacity:.82}
-.hero-number{font-size:clamp(72px,10vw,116px);font-weight:900;line-height:.9;letter-spacing:-.05em;margin:18px 0 8px}
-.hero-title{font-size:clamp(20px,2vw,28px);font-weight:800}
-.hero-sub{margin-top:8px;font-size:14px;opacity:.82;max-width:600px;line-height:1.55}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
-.chip{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);font-size:13px;font-weight:700}
-.photo-card{background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:var(--shadow);display:grid;grid-template-rows:minmax(220px,1fr) auto}
-.photo{width:100%;height:100%;min-height:270px;object-fit:cover;background:#e9f2f7}
-.photo-caption{padding:14px 17px;display:flex;justify-content:space-between;gap:12px;align-items:center}
-.photo-caption b{font-size:14px}.photo-caption span{font-size:11px;color:var(--muted)}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 10px 30px rgba(23,64,91,.05)}
-.metric-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.metric-label{font-size:13px;color:var(--muted);font-weight:700}
-.icon{width:34px;height:34px;border-radius:11px;background:var(--sky);display:grid;place-items:center;color:var(--blue);font-weight:900}
-.metric-value{font-size:clamp(30px,4vw,42px);line-height:1;font-weight:900;letter-spacing:-.035em;margin:16px 0 10px}
-.delta{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:850;padding:6px 9px;border-radius:999px}
-.up{color:var(--green);background:var(--green-bg)}.down{color:var(--red);background:var(--red-bg)}.neutral{color:var(--amber);background:var(--amber-bg)}
-.metric-foot{font-size:12px;color:var(--muted);margin-top:9px}
-.insight{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;background:linear-gradient(90deg,#edf8fd,#f9fcfe);border:1px solid #d5eaf5;border-radius:20px;padding:20px 22px;margin-bottom:18px}
-.insight-icon{width:42px;height:42px;border-radius:14px;background:#d9eef9;display:grid;place-items:center;color:var(--blue);font-size:22px}
-.insight h2{font-size:18px;margin:0 0 6px;color:#114c76}.insight p{font-size:16px;line-height:1.7;margin:0}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
-.section-title{display:flex;justify-content:space-between;align-items:end;gap:10px;margin-bottom:14px}
-.section-title h2{font-size:20px;margin:0;color:#143e5d}.section-title p{font-size:12px;color:var(--muted);margin:0}
-.intent-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.intent{padding:15px;border-radius:16px;background:#f8fbfd;border:1px solid var(--line)}
-.intent .row{display:flex;gap:10px;align-items:center;margin-bottom:7px}
-.intent .dot{width:32px;height:32px;border-radius:11px;background:#e9f6fc;display:grid;place-items:center;font-size:17px}
-.intent b{font-size:14px}.intent p{font-size:12px;line-height:1.5;color:var(--muted);margin:0}
-.page-list{display:grid;gap:10px}
-.page-row{display:grid;grid-template-columns:minmax(110px,1.3fr) 3fr 44px;align-items:center;gap:10px}
-.page-name{font-size:12px;color:#34566e;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bar{height:10px;background:#edf3f7;border-radius:999px;overflow:hidden}
-.bar>i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#0d5f97,#55a9d4)}
-.page-count{font-size:13px;font-weight:900;text-align:right}
-.note{font-size:11px;color:var(--muted);line-height:1.5;margin-top:12px}
-.funnel{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
-.step{min-height:112px;border-radius:17px;padding:15px;display:flex;flex-direction:column;justify-content:space-between;background:#edf7fc;border:1px solid #d8eaf4}
-.step.known{background:linear-gradient(145deg,#eef8fd,#e2f2fa)}
-.step.unknown{background:#fbfcfd;border-style:dashed;color:#738796}
-.step small{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#6b8698}
-.step strong{font-size:20px;color:#0f527f}.step.unknown strong{color:#7a8e9c}
-.step span{font-size:11px;line-height:1.35;color:#6c8495}
-.actions{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.action{border:1px solid var(--line);background:#fff;border-radius:18px;padding:18px;position:relative;overflow:hidden}
-.action:before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:linear-gradient(#0f5f96,#55a9d4)}
-.action-num{width:32px;height:32px;border-radius:11px;background:#e9f6fc;color:#0f5f96;display:grid;place-items:center;font-weight:900;margin-bottom:12px}
-.action b{display:block;font-size:14px;margin-bottom:7px}.action p{font-size:12px;color:var(--muted);line-height:1.55;margin:0}
-.footer{display:flex;justify-content:space-between;gap:18px;margin-top:18px;padding:0 4px;color:#7a8d9b;font-size:11px;line-height:1.5}
-.footer a{text-decoration:none;color:#35698b}
-@media(max-width:980px){.hero{grid-template-columns:1fr}.photo-card{grid-template-rows:230px auto}.grid4{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.funnel{grid-template-columns:repeat(3,1fr)}.actions{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.shell{padding:16px 12px 32px}.header{align-items:flex-start}.badge{display:none}.brand{display:block}.logo-wrap{display:inline-block;margin-bottom:12px}.logo{width:185px;max-width:70vw}.hero-main{padding:23px;border-radius:21px}.photo-card{border-radius:21px}.grid4{grid-template-columns:1fr 1fr;gap:10px}.card{padding:16px;border-radius:17px}.metric-value{font-size:31px}.intent-grid{grid-template-columns:1fr}.funnel{grid-template-columns:1fr 1fr}.actions{grid-template-columns:1fr}.page-row{grid-template-columns:minmax(90px,1.1fr) 2fr 34px}.footer{display:block}}
-@media(max-width:420px){.grid4{grid-template-columns:1fr}.funnel{grid-template-columns:1fr 1fr}.hero-number{font-size:76px}}
+body{margin:0;background:#eef8fd;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;color:var(--ink)}
+.dashboard{max-width:1536px;margin:auto;padding:12px}
+.panel{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.top{
+  min-height:135px;border-radius:18px;overflow:hidden;position:relative;
+  background:
+    linear-gradient(90deg,rgba(235,247,255,.98) 0%,rgba(235,247,255,.92) 34%,rgba(235,247,255,.36) 67%,rgba(235,247,255,.15) 100%),
+    url("https://admin.bangkokeyehospital.com/storage/app/files/shares/Corporate/timeline2025/timeline_web_final2025-23.png") center right/cover no-repeat;
+  border:1px solid #d5eaf7;
+}
+.top-inner{display:grid;grid-template-columns:240px 1fr auto;align-items:center;gap:20px;padding:14px 22px;min-height:135px}
+.logo-box{background:#fff;border-radius:10px;padding:10px 12px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(19,74,118,.05)}
+.logo{width:190px;max-width:100%;height:auto;display:block}
+.title h1{margin:0;color:#0b4686;font-size:clamp(34px,4.1vw,61px);line-height:1;font-weight:900;letter-spacing:-.03em}
+.title p{margin:8px 0 0;color:#224f79;font-size:clamp(17px,1.8vw,27px);font-weight:700}
+.title small{display:block;margin-top:7px;color:#5d7892;font-size:clamp(13px,1.2vw,18px)}
+.date{text-align:right;align-self:start;padding-top:4px}
+.date-pill{display:inline-flex;gap:8px;align-items:center;background:#064786;color:#fff;border-radius:10px;padding:10px 14px;font-weight:800;font-size:14px}
+.date-note{margin-top:8px;font-size:12px;color:#5f7790;line-height:1.45}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.kpi{padding:14px 15px 12px;min-height:156px}
+.kpi-head{display:flex;gap:10px;align-items:center}
+.ico{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:19px;font-weight:900;flex:0 0 auto}
+.i-blue{background:#dff4ff;color:#0878bf}.i-red{background:#ffe9ec;color:#df4f61}.i-green{background:#e5f8ef;color:#0c9f64}
+.kpi-title{font-size:14px;font-weight:900;color:#154779;line-height:1.25}.kpi-sub{font-size:11px;color:#637f99;margin-top:2px}
+.compare{display:grid;grid-template-columns:1fr 30px 1fr;align-items:end;margin-top:13px}
+.mon{font-size:11px;color:#6d8399;font-weight:700}.num{font-size:clamp(28px,3vw,42px);font-weight:900;color:#174f88;line-height:1}
+.arrow{text-align:center;color:#4d77a0;font-size:24px;padding-bottom:7px}
+.delta{font-size:13px;font-weight:900;margin-top:5px}.up{color:var(--green)}.down{color:var(--red)}
+.spark{height:31px;margin-top:5px;display:flex;align-items:end;gap:4px}
+.spark span{display:block;flex:1;border-radius:3px 3px 0 0;background:#bde6fa}.spark.green span{background:#a8ead0}.spark.red span{background:#ffcbd0}
+.mid{display:grid;grid-template-columns:2.1fr .9fr;gap:10px;margin-top:10px}
+.intent-wrap{padding:14px}.sec-head{display:flex;gap:10px;align-items:center;margin-bottom:10px}.sec-icon{width:36px;height:36px;border-radius:50%;background:#dff4ff;color:#0a67aa;display:grid;place-items:center;font-size:19px;font-weight:900}
+.sec-title{font-size:17px;font-weight:900;color:#104b82}.sec-sub{font-size:11px;color:#6a8297;margin-top:2px}
+.intents{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.intent{border-radius:14px;padding:12px;min-height:207px;border:1px solid var(--line);background:linear-gradient(180deg,#f9fdff,#eef8fd)}
+.intent:nth-child(2){background:linear-gradient(180deg,#fbfdff,#eef8fd)}
+.intent:nth-child(3){background:linear-gradient(180deg,#fbfffe,#eefaf7)}
+.intent:nth-child(4){background:linear-gradient(180deg,#fff9fa,#fff0f2);border-color:#f6dce0}
+.intent h3{margin:0;font-size:13px;color:#144a7b;line-height:1.3}.intent .big{font-size:34px;font-weight:900;color:#0d5092;margin:13px 0 2px}.intent:nth-child(4) .big{color:#ca4960}
+.intent .label{font-size:10px;color:#6e8398}.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}.tag{font-size:10px;background:#fff;border:1px solid #d7e8f3;border-radius:999px;padding:5px 8px;color:#48677f}
+.intent .need{border-top:1px solid #dbeaf3;margin-top:10px;padding-top:8px;font-size:10px;line-height:1.45;color:#45627a}.intent .need b{color:#173f62}
+.pages{padding:14px}.table{width:100%;border-collapse:separate;border-spacing:0 6px;font-size:11px}.table th{text-align:left;color:#72869a;font-size:10px;padding:0 7px}.table td{background:#f8fbfd;padding:7px;border-top:1px solid #e5eef4;border-bottom:1px solid #e5eef4}.table td:first-child{border-left:1px solid #e5eef4;border-radius:9px 0 0 9px}.table td:last-child{border-right:1px solid #e5eef4;border-radius:0 9px 9px 0}
+.rank{font-weight:900;color:#12528b}.url{font-weight:800;color:#2c5678}.ev{font-weight:900;color:#134d82;font-size:15px}.pill{display:inline-block;padding:5px 7px;border-radius:999px;font-size:10px;font-weight:900}.p-up{color:#138857;background:#e8f8f0}.p-down{color:#d64e5a;background:#ffedef}
+.bottom{display:grid;grid-template-columns:1.55fr .72fr .78fr;gap:10px;margin-top:10px}
+.funnel{padding:14px}.flow{display:grid;grid-template-columns:1fr 22px 1fr 22px 1fr 22px 1fr 22px 1fr;align-items:stretch;margin-top:6px}.step{background:#f8fbfd;border:1px solid #e0edf5;border-radius:12px;padding:10px;text-align:center;min-height:122px}.step .circle{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;margin:0 auto 6px;background:#e0f3ff;color:#0878bf;font-weight:900}.step .n{font-size:21px;font-weight:900;color:#0c4f91;margin-top:4px}.step .t{font-size:10px;color:#5d768d;line-height:1.35}.step.unknown .n{color:#8b98a5}.fa{display:grid;place-items:center;color:#557b99;font-weight:900}
+.insight{padding:14px;background:linear-gradient(180deg,#fff,#fff6f6);border-color:#f1dadd}.insight .sec-icon{background:#ffe9ec;color:#e24d61}.insight ul{padding-left:17px;margin:8px 0 0}.insight li{font-size:11px;color:#546f86;line-height:1.45;margin:6px 0}.insight li::marker{color:#ef5b68}.insight li.good::marker{color:#19a66c}
+.actions{padding:14px}.action{display:grid;grid-template-columns:28px 1fr;gap:8px;margin-top:9px}.anum{width:28px;height:28px;border-radius:50%;background:#1383cf;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:900}.action b{display:block;font-size:11px;color:#164e7e;line-height:1.3}.action p{margin:2px 0 0;font-size:9.5px;color:#667d91;line-height:1.35}
+.footnote{font-size:10px;color:#70879a;margin:8px 4px 0;line-height:1.45}
+@media(max-width:1100px){
+  .top-inner{grid-template-columns:200px 1fr}.date{grid-column:2}.kpis{grid-template-columns:repeat(2,1fr)}
+  .mid,.bottom{grid-template-columns:1fr}.intents{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+  .dashboard{padding:8px}.top{background-position:72% center}.top-inner{grid-template-columns:1fr;padding:14px}
+  .logo-box{width:max-content;max-width:100%}.title h1{font-size:36px}.title p{font-size:18px}.date{grid-column:auto;text-align:left}
+  .kpis{grid-template-columns:1fr}.intents{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.fa{height:22px;transform:rotate(90deg)}
+  .table{font-size:10px}.pages{overflow-x:auto}.bottom{display:block}.bottom>*{margin-bottom:10px}
+}
 </style>
 </head>
 <body>
-<main class="shell">
-<header class="header">
-<div class="brand"><div class="logo-wrap"><img class="logo" src="logo-beh-word-02.jpg" alt="Bangkok Eye Hospital"></div><div><div class="kicker">SEO Executive Dashboard</div><h1>จาก Search สู่ผลลัพธ์ทางธุรกิจ</h1><div class="period">August 2026 · เทียบ July 2026</div></div></div>
-<div class="badge">ORGANIC SEARCH</div>
-</header>
+<div class="dashboard">
+  <section class="top">
+    <div class="top-inner">
+      <div class="logo-box"><img src="logo-beh-word-02.jpg" class="logo" alt="Bangkok Eye Hospital"></div>
+      <div class="title">
+        <h1>ผลลัพธ์จากการทำ SEO</h1>
+        <p>พาลูกค้าเข้ามา และเกิดการติดต่อโรงพยาบาล มากขึ้นอย่างไร</p>
+        <small>เปรียบเทียบเดือนสิงหาคม 2569 กับเดือนกรกฎาคม 2569</small>
+      </div>
+      <div class="date">
+        <div class="date-pill">▣ สิงหาคม 2569</div>
+        <div class="date-note">เทียบกับ<br>กรกฎาคม 2569</div>
+      </div>
+    </div>
+  </section>
 
-<section class="hero">
-<div class="hero-main">
-<div class="hero-label">BUSINESS RESULT FROM SEO</div><div class="hero-number">425</div><div class="hero-title">Contact Actions จาก Organic Search</div>
-<div class="hero-sub">จำนวนการกดติดต่อที่ระบบบันทึกจาก Organic Search ในเดือนสิงหาคม 2026 — ไม่ใช่จำนวนผู้ป่วย และยังไม่เท่ากับจำนวนการนัดหมายสำเร็จ</div>
-<div class="chips"><span class="chip">Call 360 ↑ 8.1%</span><span class="chip">LINE 65 ↓ 30.9%</span><span class="chip">Contact รวม ↓ 0.5%</span></div>
+  <section class="kpis">
+    <article class="panel kpi">
+      <div class="kpi-head"><div class="ico i-blue">👥</div><div><div class="kpi-title">ผู้เข้าชมจากการค้นหาของ Google</div><div class="kpi-sub">Organic Sessions</div></div></div>
+      <div class="compare"><div><div class="mon">ก.ค. 2569</div><div class="num">≈43,077</div></div><div class="arrow">→</div><div><div class="mon">ส.ค. 2569</div><div class="num">40,923</div><div class="delta down">▼ 5.0%</div></div></div>
+      <div class="spark"><span style="height:24%"></span><span style="height:32%"></span><span style="height:26%"></span><span style="height:38%"></span><span style="height:48%"></span><span style="height:58%"></span><span style="height:43%"></span><span style="height:36%"></span><span style="height:49%"></span><span style="height:61%"></span><span style="height:68%"></span><span style="height:74%"></span></div>
+    </article>
+
+    <article class="panel kpi">
+      <div class="kpi-head"><div class="ico i-red">➤</div><div><div class="kpi-title">การกดติดต่อโรงพยาบาลจาก SEO</div><div class="kpi-sub">Contact Actions : Call + LINE + อื่น ๆ</div></div></div>
+      <div class="compare"><div><div class="mon">ก.ค. 2569</div><div class="num">≈427</div></div><div class="arrow">→</div><div><div class="mon">ส.ค. 2569</div><div class="num">425</div><div class="delta down">▼ 0.5%</div></div></div>
+      <div class="spark red"><span style="height:39%"></span><span style="height:55%"></span><span style="height:61%"></span><span style="height:52%"></span><span style="height:37%"></span><span style="height:45%"></span><span style="height:51%"></span><span style="height:62%"></span><span style="height:55%"></span><span style="height:69%"></span><span style="height:63%"></span><span style="height:76%"></span></div>
+    </article>
+
+    <article class="panel kpi">
+      <div class="kpi-head"><div class="ico i-green">☎</div><div><div class="kpi-title">กดโทรศัพท์ (Call)</div><div class="kpi-sub">จาก Organic</div></div></div>
+      <div class="compare"><div><div class="mon">ก.ค. 2569</div><div class="num">≈333</div></div><div class="arrow">→</div><div><div class="mon">ส.ค. 2569</div><div class="num">360</div><div class="delta up">▲ 8.1%</div></div></div>
+      <div class="spark green"><span style="height:22%"></span><span style="height:29%"></span><span style="height:38%"></span><span style="height:44%"></span><span style="height:51%"></span><span style="height:61%"></span><span style="height:67%"></span><span style="height:75%"></span><span style="height:83%"></span><span style="height:91%"></span></div>
+    </article>
+
+    <article class="panel kpi">
+      <div class="kpi-head"><div class="ico i-green">LINE</div><div><div class="kpi-title">กด LINE</div><div class="kpi-sub">จาก Organic</div></div></div>
+      <div class="compare"><div><div class="mon">ก.ค. 2569</div><div class="num">≈94</div></div><div class="arrow">→</div><div><div class="mon">ส.ค. 2569</div><div class="num">65</div><div class="delta down">▼ 30.9%</div></div></div>
+      <div class="spark red"><span style="height:92%"></span><span style="height:74%"></span><span style="height:68%"></span><span style="height:53%"></span><span style="height:45%"></span><span style="height:37%"></span><span style="height:28%"></span><span style="height:22%"></span><span style="height:18%"></span><span style="height:14%"></span></div>
+    </article>
+  </section>
+
+  <section class="mid">
+    <article class="panel intent-wrap">
+      <div class="sec-head"><div class="sec-icon">⌕</div><div><div class="sec-title">พฤติกรรมการค้นหาที่พาลูกค้าเข้ามา</div><div class="sec-sub">ผู้เข้าชมจาก SEO มีวัตถุประสงค์การค้นหาแตกต่างกัน และนำไปสู่การติดต่อโรงพยาบาล</div></div></div>
+      <div class="intents">
+        <div class="intent"><h3>1. ค้นหาโรค / อาการ</h3><div class="big">01</div><div class="label">Search Intent</div><div class="tags"><span class="tag">จอประสาทตา</span><span class="tag">เบาหวานขึ้นตา</span><span class="tag">ต้อกระจก</span><span class="tag">ตาแห้ง</span></div><div class="need"><b>ความต้องการของผู้ค้นหา</b><br>“อยากรู้ว่าเป็นอะไร / ควรทำอย่างไร”</div></div>
+        <div class="intent"><h3>2. ค้นหาวิธีรักษา / เทคโนโลยี</h3><div class="big">02</div><div class="label">Search Intent</div><div class="tags"><span class="tag">เลสิก</span><span class="tag">RLE</span><span class="tag">รักษาจอประสาทตา</span><span class="tag">Vitrectomy</span></div><div class="need"><b>ความต้องการของผู้ค้นหา</b><br>“อยากรู้วิธีรักษา / เปรียบเทียบทางเลือก”</div></div>
+        <div class="intent"><h3>3. ค้นหาแพทย์ / โรงพยาบาล</h3><div class="big">03</div><div class="label">Search Intent</div><div class="tags"><span class="tag">หมอจักษุ</span><span class="tag">หมอจอประสาทตา</span><span class="tag">โรงพยาบาลตา</span><span class="tag">ศูนย์เลสิก</span></div><div class="need"><b>ความต้องการของผู้ค้นหา</b><br>“อยากหาแพทย์เชี่ยวชาญ / เลือกโรงพยาบาล”</div></div>
+        <div class="intent"><h3>4. ค้นหาราคา / โปรโมชัน / นัดหมาย</h3><div class="big">04</div><div class="label">Search Intent</div><div class="tags"><span class="tag">ราคาเลสิก</span><span class="tag">โปรเลสิก</span><span class="tag">ตรวจตาราคา</span><span class="tag">นัดหมาย</span></div><div class="need"><b>ความต้องการของผู้ค้นหา</b><br>“อยากทราบราคา / โปรโมชัน / นัดตรวจ”</div></div>
+      </div>
+      <div class="footnote">ยังไม่มีข้อมูลยืนยันสัดส่วน % ของ Contact แยกตาม Search Intent จึงไม่ใส่ตัวเลข 38% / 32% / 20% / 10% แบบใน mockup จนกว่าจะเชื่อม Query → Landing Page → Contact ได้</div>
+    </article>
+
+    <article class="panel pages">
+      <div class="sec-head"><div class="sec-icon" style="background:#fff4d2;color:#d69a17">🏆</div><div><div class="sec-title">หน้าเว็บที่สร้างการติดต่อสูงสุด</div><div class="sec-sub">จากผู้เข้าชม Organic · ตามรายงาน ANGA</div></div></div>
+      <table class="table">
+        <thead><tr><th>#</th><th>หน้าเว็บ</th><th>การติดต่อ<br>ส.ค. 2569</th><th>เทียบ<br>ก.ค. 2569</th></tr></thead>
+        <tbody>
+          <tr><td class="rank">1</td><td class="url">/news-promotion</td><td class="ev">91</td><td><span class="pill p-up">▲ 44.4%</span></td></tr>
+          <tr><td class="rank">2</td><td class="url">Homepage</td><td class="ev">85</td><td><span class="pill p-down">▼ 12.4%</span></td></tr>
+          <tr><td class="rank">3</td><td class="url">/en</td><td class="ev">15</td><td><span class="pill p-up">▲ 15.4%</span></td></tr>
+          <tr><td class="rank">4</td><td class="url">Eye twitching</td><td class="ev">13</td><td><span class="pill p-up">▲ 62.5%</span></td></tr>
+          <tr><td class="rank">5</td><td class="url">Eyelid fat lumps</td><td class="ev">10</td><td><span class="pill p-up">▲ 11.1%</span></td></tr>
+        </tbody>
+      </table>
+      <div class="footnote">ตัวเลขนี้บอก “Landing Page ที่เกิด Key Event” ไม่ได้พิสูจน์โดยตรงว่าคำค้นใดเป็นต้นเหตุของ Contact จนกว่าจะเชื่อมข้อมูล Query เพิ่มเติม</div>
+    </article>
+  </section>
+
+  <section class="bottom">
+    <article class="panel funnel">
+      <div class="sec-head"><div class="sec-icon">⚑</div><div><div class="sec-title">เส้นทางจากการค้นหาบน Google สู่การเป็นผู้ป่วย</div></div></div>
+      <div class="flow">
+        <div class="step"><div class="circle">G</div><div class="t">ค้นหาบน Google<br>(Organic Search)</div><div class="n">40,923</div><div class="delta down">▼ 5.0%</div><div class="t">จากเดือนก่อน</div></div>
+        <div class="fa">→</div>
+        <div class="step"><div class="circle">➤</div><div class="t">กดติดต่อโรงพยาบาล<br>(Call / LINE / อื่น ๆ)</div><div class="n">425</div><div class="delta down">▼ 0.5%</div><div class="t">จากเดือนก่อน</div></div>
+        <div class="fa">→</div>
+        <div class="step unknown"><div class="circle">▣</div><div class="t">นัดหมายตรวจ<br>(Appointments)</div><div class="n">?</div><div class="t">ยังไม่มีข้อมูลเชื่อมต่อ<br>(HIS/CRM)</div></div>
+        <div class="fa">→</div>
+        <div class="step unknown"><div class="circle">●</div><div class="t">ผู้เข้ารับบริการ<br>(Patients)</div><div class="n">?</div><div class="t">ยังไม่มีข้อมูลเชื่อมต่อ<br>(HIS/CRM)</div></div>
+        <div class="fa">→</div>
+        <div class="step unknown"><div class="circle">฿</div><div class="t">รายได้จากการรักษา<br>(Revenue)</div><div class="n">?</div><div class="t">ยังไม่มีข้อมูลเชื่อมต่อ<br>(HIS/CRM)</div></div>
+      </div>
+    </article>
+
+    <article class="panel insight">
+      <div class="sec-head"><div class="sec-icon">⌖</div><div><div class="sec-title" style="color:#d84d61">Key Insight (สิงหาคม 2569)</div></div></div>
+      <ul>
+        <li>Organic Sessions ลดลง 5% แต่ Contact Actions แทบไม่ลดลง (-0.5%)</li>
+        <li>การกดโทรเพิ่มขึ้น 8.1% สะท้อนว่าช่องทางโทรมี Momentum ที่ดีขึ้น</li>
+        <li>การกด LINE ลดลง 30.9% ควรตรวจ CTA, Tracking และ Landing Page ที่เกี่ยวข้อง</li>
+        <li class="good">Keyword สำคัญติดอันดับ Top 10 เพิ่มขึ้น 1 คำ (จาก 34 → 35)</li>
+      </ul>
+    </article>
+
+    <article class="panel actions">
+      <div class="sec-head"><div class="sec-icon">◎</div><div><div class="sec-title">แผนการดำเนินงานต่อไป (Next Actions)</div></div></div>
+      <div class="action"><div class="anum">1</div><div><b>วิเคราะห์ Search Intent ที่สร้าง Contact จริง</b><p>เชื่อมข้อมูล Keyword → Landing Page → Call/LINE</p></div></div>
+      <div class="action"><div class="anum">2</div><div><b>ขยายกลุ่มที่มี Business Intent สูง</b><p>เช่น LASIK, RLE, จอประสาทตา, ต้อกระจก และหน้าแพทย์ เมื่อมีหลักฐานรองรับ</p></div></div>
+      <div class="action"><div class="anum">3</div><div><b>ปรับปรุงหน้าที่มีผู้เข้าเยอะแต่ยังไม่ติดต่อ</b><p>ตรวจ CTA, ปุ่ม LINE, เบอร์โทร และเส้นทางการนัดหมาย</p></div></div>
+      <div class="action"><div class="anum">4</div><div><b>ติดตามผลแบบรายกลุ่มทุกเดือน</b><p>เพื่อประเมินว่า SEO ส่งผลไปสู่การนัดหมายและรายได้อย่างไร</p></div></div>
+    </article>
+  </section>
+
+  <div class="footnote">หมายเหตุ: ตัวเลขเดือนกรกฎาคมที่มีเครื่องหมาย ≈ เป็นค่าคำนวณย้อนจาก % MoM ในรายงาน ANGA ไม่ใช่ raw data โดยตรง · Contact Key Events คือ actions ที่ระบบบันทึก ไม่ใช่จำนวนผู้ป่วย</div>
 </div>
-<div class="photo-card"><img class="photo" src="https://admin.bangkokeyehospital.com/storage/app/files/shares/Corporate/timeline2025/timeline_web_final2025-23.png" alt="Bangkok Eye Hospital" loading="eager"><div class="photo-caption"><b>Bangkok Eye Hospital</b><span>ภาพจากเว็บไซต์ทางการของโรงพยาบาล</span></div></div>
-</section>
-
-<section class="grid4">
-<article class="card"><div class="metric-top"><div class="metric-label">Organic Sessions</div><div class="icon">↗</div></div><div class="metric-value">40,923</div><span class="delta down">↓ 5.0%</span><div class="metric-foot">จำนวนครั้งเข้าเว็บไซต์จาก Organic</div></article>
-<article class="card"><div class="metric-top"><div class="metric-label">Contact Actions</div><div class="icon">◎</div></div><div class="metric-value">425</div><span class="delta down">↓ 0.5%</span><div class="metric-foot">Call + LINE ที่ถูกบันทึกเป็น Key Event</div></article>
-<article class="card"><div class="metric-top"><div class="metric-label">Call</div><div class="icon">☎</div></div><div class="metric-value">360</div><span class="delta up">↑ 8.1%</span><div class="metric-foot">ช่องทางที่เติบโตขึ้นในเดือนนี้</div></article>
-<article class="card"><div class="metric-top"><div class="metric-label">Keywords Top 10</div><div class="icon">10</div></div><div class="metric-value">35 / 60</div><span class="delta up">+1 keyword</span><div class="metric-foot">จาก 34 → 35 keywords</div></article>
-</section>
-
-<section class="insight"><div class="insight-icon">✦</div><div><h2>Key Insight</h2><p>Organic Sessions ลดลง 5% แต่ Contact Actions ลดเพียง 0.5% และการกดโทรเพิ่มขึ้น 8.1% ขณะที่ LINE ลดลง 30.9% ดังนั้นรอบถัดไปควรโฟกัสที่ <b>“คนที่มีแนวโน้มติดต่อค้นหาอะไร → เข้า Landing Page ไหน → แล้วกด Contact จากจุดใด”</b> มากกว่าดู Traffic อย่างเดียว</p></div></section>
-
-<section class="two">
-<article class="card"><div class="section-title"><div><h2>พฤติกรรมการค้นหา</h2><p>Search Intent ที่ต้องแยกวัดต่อ</p></div></div>
-<div class="intent-grid">
-<div class="intent"><div class="row"><span class="dot">◉</span><b>โรค / อาการ</b></div><p>ผู้ใช้กำลังหาคำตอบว่าอาการที่เป็นคืออะไร และควรทำอย่างไรต่อ</p></div>
-<div class="intent"><div class="row"><span class="dot">✚</span><b>การรักษา</b></div><p>กำลังเปรียบเทียบวิธีรักษา เช่น LASIK, RLE, Retina หรือ Cataract</p></div>
-<div class="intent"><div class="row"><span class="dot">⌂</span><b>แพทย์ / โรงพยาบาล</b></div><p>กำลังหาผู้ให้บริการหรือแพทย์ที่น่าเชื่อถือและตรงความต้องการ</p></div>
-<div class="intent"><div class="row"><span class="dot">฿</span><b>ราคา / โปร / นัดหมาย</b></div><p>เป็นกลุ่มที่ใกล้การตัดสินใจและมีโอกาสกดติดต่อสูง</p></div>
-</div><div class="note">ยังไม่มีข้อมูลยืนยันว่า Contact 425 ครั้งแบ่งตามแต่ละ Intent เท่าไร จึงไม่ใส่เปอร์เซ็นต์สมมติ</div></article>
-
-<article class="card"><div class="section-title"><div><h2>Landing Pages ที่เกิด Key Event</h2><p>ยืนยันได้จากรายงาน ANGA</p></div></div>
-<div class="page-list">
-<div class="page-row"><div class="page-name">/news-promotion</div><div class="bar"><i style="width:100%"></i></div><div class="page-count">91</div></div>
-<div class="page-row"><div class="page-name">Homepage</div><div class="bar"><i style="width:93.4%"></i></div><div class="page-count">85</div></div>
-<div class="page-row"><div class="page-name">Eye twitching</div><div class="bar"><i style="width:14.3%"></i></div><div class="page-count">13</div></div>
-<div class="page-row"><div class="page-name">Eyelid fat lumps</div><div class="bar"><i style="width:11%"></i></div><div class="page-count">10</div></div>
-<div class="page-row"><div class="page-name">Subconjunctival hemorrhage</div><div class="bar"><i style="width:11%"></i></div><div class="page-count">10</div></div>
-<div class="page-row"><div class="page-name">Blurry vision</div><div class="bar"><i style="width:9.9%"></i></div><div class="page-count">9</div></div>
-</div><div class="note">สิ่งที่เห็นได้คือทั้งหน้า Promotion / Homepage และบทความอาการสามารถนำไปสู่การกด Contact ได้ แต่ยังไม่ใช่การพิสูจน์ Search Query → Contact แบบรายคำค้น</div></article>
-</section>
-
-<section class="card" style="margin-bottom:18px"><div class="section-title"><div><h2>SEO พาคนไปถึงขั้นไหนแล้ว?</h2><p>จากข้อมูลที่ยืนยันได้ ณ ตอนนี้</p></div></div>
-<div class="funnel">
-<div class="step known"><small>01 Search</small><strong>Google</strong><span>ผู้ใช้ค้นหาข้อมูล</span></div>
-<div class="step known"><small>02 Website</small><strong>40,923</strong><span>Organic Sessions</span></div>
-<div class="step known"><small>03 Contact</small><strong>425</strong><span>Call / LINE Key Events</span></div>
-<div class="step unknown"><small>04 Appointment</small><strong>ยังไม่มีข้อมูล</strong><span>ต้องเชื่อมข้อมูลนัดหมาย</span></div>
-<div class="step unknown"><small>05 Patient</small><strong>ยังไม่มีข้อมูล</strong><span>ต้องเชื่อมผู้ป่วยจริง</span></div>
-<div class="step unknown"><small>06 Revenue</small><strong>ยังไม่มีข้อมูล</strong><span>ต้องเชื่อมข้อมูลธุรกิจ</span></div>
-</div></section>
-
-<section class="card"><div class="section-title"><div><h2>Next Actions</h2><p>สิ่งที่ควรทำต่อจาก Insight เดือนนี้</p></div></div>
-<div class="actions">
-<div class="action"><div class="action-num">1</div><b>เชื่อม Intent → Page → Contact</b><p>ใช้ GSC Query ร่วมกับ GA4 Landing Page และ Call/LINE เพื่อหา Search Intent ที่สร้าง Contact จริง</p></div>
-<div class="action"><div class="action-num">2</div><b>ขยายกลุ่มที่สร้าง Contact</b><p>เพิ่มและปรับ Content, Internal Link และหน้าศูนย์ในกลุ่มที่มีหลักฐานว่านำไปสู่การติดต่อ</p></div>
-<div class="action"><div class="action-num">3</div><b>ตรวจ LINE ที่ลดลง 30.9%</b><p>เช็ก CTA, Tracking และเส้นทางกด LINE ก่อนสรุปว่าเป็นพฤติกรรมผู้ใช้หรือปัญหาทางเทคนิค</p></div>
-<div class="action"><div class="action-num">4</div><b>ต่อข้อมูลถึง Patient / Revenue</b><p>เชื่อมข้อมูลหลังบ้านอย่างเหมาะสม เพื่อวัดว่า SEO สร้างนัดหมาย ผู้ป่วย และผลลัพธ์ทางธุรกิจจริงเท่าไร</p></div>
-</div></section>
-
-<footer class="footer"><span>Source: ANGA Monthly SEO Performance Report — August 2026</span><span>หมายเหตุ: Contact Key Events = actions ที่ระบบบันทึก ไม่ใช่จำนวนคนหรือผู้ป่วย · ภาพโรงพยาบาลจาก <a href="https://www.bangkokeyehospital.com/" target="_blank" rel="noopener">เว็บไซต์ทางการ BEH</a></span></footer>
-</main>
 </body>
 </html>
